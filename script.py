@@ -64,7 +64,7 @@ def rename_file(username):
 
 
 def check_file(username):
-    return True if os.path.exists(f'{username}.txt') else False
+    return os.path.exists(f'{username}.txt')
 
 
 def main():
@@ -73,9 +73,8 @@ def main():
         for user in users:
             if check_file(user['username']):
                 rename_file(user['username'])
-                create_file(user['username'], user['name'], user['email'], user['company']['name'], user['id'])
-            else:
-                create_file(user['username'], user['name'], user['email'], user['company']['name'], user['id'])
+            create_file(user['username'], user['name'], user['email'], user['company']['name'], user['id'])
+            
     except Exception as err:
         print(err)
 
