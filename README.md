@@ -1,9 +1,5 @@
 # MY SCRIPT
 
-Script that was written as a test task for the position junior python developer.
-
-
-
 Есть API для получения списка задач и api для получения списка юзеров:
 https://jsonplaceholder.typicode.com/todos
 https://jsonplaceholder.typicode.com/users
